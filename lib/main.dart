@@ -1,3 +1,5 @@
+
+import 'package:bikash_lite_app/presentation/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-     // home: ,
+      home: SplashScreen(),
     );
   }
 }
