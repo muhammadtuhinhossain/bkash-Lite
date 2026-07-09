@@ -1,3 +1,4 @@
+import 'package:bikash_lite_app/presentation/home/view/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/app_colors.dart';
@@ -26,14 +27,14 @@ class _SplashScreenState extends State<SplashScreen>
     _fadeIn = CurvedAnimation(parent: _animController, curve: Curves.easeIn);
     _animController.forward();
 
-    // Future.delayed(Duration(seconds: 2), () {
-    //   if (mounted) {
-    //     Navigator.push(
-    //       context,
-    //       MaterialPageRoute(builder: (context) => LoginScreen()),
-    //     );
-    //   }
-    // });
+    Future.delayed(Duration(seconds: 2), () {
+      if (mounted) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomeScreen()),
+        );
+      }
+    });
   }
 
   @override
