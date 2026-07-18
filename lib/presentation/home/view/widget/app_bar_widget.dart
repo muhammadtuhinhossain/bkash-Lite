@@ -13,6 +13,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget{
     return AppBar(
       backgroundColor: AppColors.primary,
       toolbarHeight: 80,
+      automaticallyImplyLeading: false,
       title: Row(
         spacing: 8,
         children: [

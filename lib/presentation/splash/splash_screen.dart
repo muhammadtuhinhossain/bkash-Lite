@@ -2,6 +2,7 @@ import 'package:bikash_lite_app/presentation/home/view/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/app_colors.dart';
+import '../login/view/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
