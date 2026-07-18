@@ -1,4 +1,6 @@
+import 'package:bikash_lite_app/presentation/home/provider/home_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../core/app_colors.dart';
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget{
@@ -54,8 +56,13 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget{
                     ),
                     SizedBox(width: 4,),
                     Center(
-                      child: Text('Tap for Balance',
-                        style: TextStyle(fontSize: 12, fontWeight: .bold, color: Colors.black),
+                      child: GestureDetector(
+                        onDoubleTap: (){
+                          Provider.of<HomeProvider>(context, listen: false).toggleBalanceTapped();
+                        },
+                        child: Text('Tap for Balance',
+                          style: TextStyle(fontSize: 12, fontWeight: .bold, color: Colors.black),
+                        ),
                       ),
                     ),
                   ],

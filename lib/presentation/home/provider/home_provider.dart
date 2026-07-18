@@ -7,6 +7,9 @@ class HomeProvider extends ChangeNotifier{
   bool _isExpanded = false;
   bool get isExpanded => _isExpanded;
 
+  bool _isTappedBalance = false;
+  bool get isTappedBalance => _isTappedBalance;
+
   List<HomeMenuItemModel> get visibleItems{
     if(_isExpanded){
       return _allItems;
@@ -18,5 +21,10 @@ class HomeProvider extends ChangeNotifier{
   void toggleExpanded(){
     _isExpanded = !_isExpanded;
     notifyListeners();
+  }
+
+  void toggleBalanceTapped(){
+    _isTappedBalance = !_isTappedBalance;
+   notifyListeners();
   }
 }
